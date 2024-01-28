@@ -128,10 +128,11 @@ namespace Adivina_el_numero
         {
             //Muestra un mensaje y habilita los boton de reiniciar
             lbl_notas.AutoSize = true;
-            lbl_notas.Text = "Debes ingresar un numero entre 1 y 100\n y luego hacer clik en enviar, el sistema\n  te indicara si acertastes(Ver ayuda)";
+            lbl_notas.Text = "-> Debes ingresar un numero entre 1 y 100\n y luego hacer clik en enviar, el sistema\n  te indicara si acertastes(Ver ayuda)";
             bt_continuar.Visible = true;
             bt_reiniciar.Enabled = true;
             lbl_x.Visible = false;
+            lbl_x.Visible = true;
         }
 
         private void txt_numero_TextChanged(object sender, EventArgs e)
@@ -143,7 +144,7 @@ namespace Adivina_el_numero
         {
             if (lbl_numero.Text == "")// Valida que el usuario haiga ingresado el numero
             {
-                lbl_notas.Text = "No has ingresado el numero!!";
+                lbl_notas.Text = "-> No has ingresado el numero!!";
             }
             else
             {
@@ -177,14 +178,14 @@ namespace Adivina_el_numero
             if (Convert.ToInt32(num_usurio) > 100)
             {
                 //Se valida que el numero ingresado sea entre 0 y 100
-                lbl_notas.Text = "Numero fuera de rango(Rango:1-100)";
+                lbl_notas.Text = "-> Numero fuera de rango(Rango:1-100)";
                 num_user = "";
                 lbl_numero.Text = "";
             }
             //En caso de que la diferencia sea mayor a 50 numeros
             if (diferencia > 50 & diferencia < 101)
             {
-                lbl_notas.Text = "Numero Ingresado: "+num_user+" \n¡Muy lejos! \n Analiza tu jugada. Intentalo de nuevo.";
+                lbl_notas.Text = "->Numero Ingresado: "+num_user+" \n!Muy lejos! \n -> Analiza tu jugada. Intentalo de nuevo.";
                 num_user = "";
                 lbl_numero.Text = "";
                 // Se habilitan los botones para generar la pista al usuario
@@ -220,7 +221,7 @@ namespace Adivina_el_numero
             //Se validad que la diferencia sea entre 25 y 50 numeros con respecto al numero secreto
             if (diferencia < 51 & diferencia > 10)
             {
-                lbl_notas.Text = "Numero Ingresado: "+num_user+" \n¡Medianamente cerca!\n Tus posibibilidades de acierto han subido.";
+                lbl_notas.Text = "->Numero Ingresado: "+num_user+" \n¡Medianamente cerca!\n -> Tus posibibilidades de acierto han subido.";
                 num_user = "";
                 lbl_numero.Text = "";
                 // Se habilitan los botones para generar la pista al usuario
@@ -258,7 +259,8 @@ namespace Adivina_el_numero
             //Se valida que el rango de proximida sea menor a 10 en cualquier sentido
             if (diferencia < 11)
             {
-                lbl_notas.Text = "Numero Ingresado: "+num_user+" \n¡Estas muy cerca!";
+                //****   lbl_notas.Text = "-> Numero Ingresado: " + num_user + " \n¡Estas muy cerca!+++++" + numerox;
+                lbl_notas.Text = "-> Numero Ingresado: "+num_user+" \n¡Estas muy cerca!";
                 num_user = "";
                 lbl_numero.Text = "";
                 // Se habilitan los botones para generar la pista al usuario
@@ -300,7 +302,7 @@ namespace Adivina_el_numero
             if (num_usurio == numerox)
             {
                 // Se imprime un mensaje en pantalla junto con lo puntos
-                lbl_notas.Text = "Felicidades a adivinado el numero secreto (" + numerox + ").\n Has ganado 150 puntos adicionales.";
+                lbl_notas.Text = "-> Felicidades a adivinado el numero secreto (" + numerox + ").\n -> Has ganado 150 puntos adicionales.";
                 verx = numerox;
                 lbl_x.Text = Convert.ToString(verx);
                 Generar_x();
@@ -347,9 +349,22 @@ namespace Adivina_el_numero
             // Se valida la cantida de turnos jugados para, avanzar a la siguiente ronda
             if (turno == 0)
             {
+               lbl_notas.Text ="-> Cambio de ronda.\n \n ->Numero secreto: "+numerox;
+                if (continuar == 1) {
+
+
+                    lbl_notas.Text = "->Cambio de ronda \n-> Felicidades a adivinado el numero secreto (" + numerox + ").\n -> Has ganado 150 puntos adicionales.";
+
+                }
                 ronda = ronda + 1;// Se aumneta en uno la ronda
                 turno = 4;
                 lbl_turno.Text = "Turno: " + turno;
+                bt_continuar.Visible = true;
+                continuar = 3;
+                bt_alerta1.Visible = false;
+                bt_alerta2.Visible = false;
+                bt_alerta3.Visible = false;
+                gb_teclado.Enabled = false;
             }
 
             if (ronda > 5 & turno == 4)
@@ -357,7 +372,7 @@ namespace Adivina_el_numero
                 // Se reinician las vistas de pntos, ronda y turno y se imprime uin mesaje de salida y el puntaje
                 continuar = 2;
                 bt_continuar.Visible = true;
-                lbl_notas.Text = "Has llegado al final del juego.\n Puntaje final:" + puntos;
+                lbl_notas.Text = "-> Has llegado al final del juego.\n ** Puntaje final:" + puntos+" **";
                 lbl_turno.Text = "Turno: 0 ";
                 lbl_ronda.Text = "ronda: 0 ";
                 lbl_puntos.Text = "Puntos: 0 ";
@@ -392,6 +407,7 @@ namespace Adivina_el_numero
             lbl_puntos.Text = "Puntos: " + puntos;
             lbl_turno.Text = "Turno : " + turno;
             lbl_notas.Text = "";
+            lbl_x.Text = "X";
             bt_alerta1.Visible = false;
             bt_alerta2.Visible = false;
             bt_alerta3.Visible = false;
@@ -425,19 +441,32 @@ namespace Adivina_el_numero
                 lbl_notas.Text = "";// Se limpia la pantalla
                 Generar_x();// Se llama la funcion para generar un numero aleatorio
                 continuar = 0;
+               
             }
             else if (continuar == 1)
             {
                 // Se limpia la pantalla
-                lbl_x.Text = "X";
+                
                 lbl_notas.Text = "";
+                continuar = 0;
             }
             else if (continuar == 2)
             {
                 // Se limpia la pantalla
                 lbl_notas.Text = "";
+                continuar = 0;
+               
             }
-
+            else if (continuar == 3)
+            {
+                // Se limpia la pantalla
+                lbl_notas.Text = "";
+                Generar_x();// Se llama la funcion para generar un numero aleatorio
+                continuar = 0;
+                gb_teclado.Enabled = true;
+                
+            }
+            lbl_x.Text = "X";
             bt_continuar.Visible = false;// Se oculta el boton de continuar
 
         }
