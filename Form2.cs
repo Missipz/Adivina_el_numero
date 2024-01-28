@@ -19,8 +19,8 @@ namespace Adivina_el_numero
 
         private void bt_salir_Click(object sender, EventArgs e)
         {
-          this.Close();
-           
+            this.Close();
+
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)

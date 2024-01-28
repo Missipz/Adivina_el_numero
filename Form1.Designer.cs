@@ -65,9 +65,9 @@
             this.lbl_notas.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_notas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_notas.ForeColor = System.Drawing.Color.Red;
-            this.lbl_notas.Location = new System.Drawing.Point(54, 108);
+            this.lbl_notas.Location = new System.Drawing.Point(51, 105);
             this.lbl_notas.Name = "lbl_notas";
-            this.lbl_notas.Size = new System.Drawing.Size(0, 17);
+            this.lbl_notas.Size = new System.Drawing.Size(0, 20);
             this.lbl_notas.TabIndex = 1;
             this.lbl_notas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -86,7 +86,7 @@
             this.gb_teclado.Controls.Add(this.bt_2);
             this.gb_teclado.Controls.Add(this.bt_1);
             this.gb_teclado.Enabled = false;
-            this.gb_teclado.Location = new System.Drawing.Point(44, 240);
+            this.gb_teclado.Location = new System.Drawing.Point(51, 240);
             this.gb_teclado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gb_teclado.Name = "gb_teclado";
             this.gb_teclado.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -340,7 +340,7 @@
             this.lbl_titulo.ForeColor = System.Drawing.Color.Lime;
             this.lbl_titulo.Location = new System.Drawing.Point(83, 0);
             this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(159, 27);
+            this.lbl_titulo.Size = new System.Drawing.Size(190, 31);
             this.lbl_titulo.TabIndex = 13;
             this.lbl_titulo.Text = "The Number X";
             // 
@@ -351,7 +351,7 @@
             this.lbl_numero.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_numero.Location = new System.Drawing.Point(131, 182);
             this.lbl_numero.Name = "lbl_numero";
-            this.lbl_numero.Size = new System.Drawing.Size(0, 52);
+            this.lbl_numero.Size = new System.Drawing.Size(0, 59);
             this.lbl_numero.TabIndex = 14;
             this.lbl_numero.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -362,7 +362,7 @@
             this.lbl_x.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_x.Location = new System.Drawing.Point(230, 170);
             this.lbl_x.Name = "lbl_x";
-            this.lbl_x.Size = new System.Drawing.Size(31, 29);
+            this.lbl_x.Size = new System.Drawing.Size(34, 32);
             this.lbl_x.TabIndex = 15;
             this.lbl_x.Text = "X";
             this.lbl_x.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -388,7 +388,7 @@
             this.lbl_ronda.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ronda.Location = new System.Drawing.Point(13, 82);
             this.lbl_ronda.Name = "lbl_ronda";
-            this.lbl_ronda.Size = new System.Drawing.Size(57, 16);
+            this.lbl_ronda.Size = new System.Drawing.Size(67, 20);
             this.lbl_ronda.TabIndex = 17;
             this.lbl_ronda.Text = "Ronda:";
             this.lbl_ronda.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -401,7 +401,7 @@
             this.lbl_turno.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_turno.Location = new System.Drawing.Point(107, 82);
             this.lbl_turno.Name = "lbl_turno";
-            this.lbl_turno.Size = new System.Drawing.Size(55, 16);
+            this.lbl_turno.Size = new System.Drawing.Size(65, 20);
             this.lbl_turno.TabIndex = 18;
             this.lbl_turno.Text = "Turno: ";
             this.lbl_turno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -413,7 +413,7 @@
             this.lbl_puntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_puntos.Location = new System.Drawing.Point(196, 82);
             this.lbl_puntos.Name = "lbl_puntos";
-            this.lbl_puntos.Size = new System.Drawing.Size(66, 16);
+            this.lbl_puntos.Size = new System.Drawing.Size(80, 20);
             this.lbl_puntos.TabIndex = 19;
             this.lbl_puntos.Text = "Puntos:  ";
             this.lbl_puntos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -433,7 +433,7 @@
             // 
             // fr_inicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));

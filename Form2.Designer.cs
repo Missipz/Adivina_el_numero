@@ -36,9 +36,10 @@
             // bt_salir
             // 
             this.bt_salir.BackColor = System.Drawing.Color.Lime;
-            this.bt_salir.Location = new System.Drawing.Point(228, 3);
+            this.bt_salir.Location = new System.Drawing.Point(342, 5);
+            this.bt_salir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bt_salir.Name = "bt_salir";
-            this.bt_salir.Size = new System.Drawing.Size(75, 23);
+            this.bt_salir.Size = new System.Drawing.Size(112, 35);
             this.bt_salir.TabIndex = 0;
             this.bt_salir.Text = "Salir";
             this.bt_salir.UseVisualStyleBackColor = false;
@@ -47,22 +48,24 @@
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(12, 54);
+            this.richTextBox1.Location = new System.Drawing.Point(18, 83);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(334, 389);
+            this.richTextBox1.Size = new System.Drawing.Size(501, 598);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // frm_ayuda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(351, 462);
+            this.ClientSize = new System.Drawing.Size(526, 711);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.bt_salir);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_ayuda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";

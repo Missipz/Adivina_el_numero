@@ -144,8 +144,15 @@ Intento 2: +80
 Intento 3: +75
 Intento 4: +60
 
+-&gt;Cuando el jugador acierte el número secreto.
 
--Si aciertas el numero además d ellos puntos correspondientes a la Ronda , se te asignaran 150 puntos adicionales por el acierto.
+Intento 1: +100
+Intento 2: +95
+Intento 3: +85
+Intento 4: +70
++ 150 puntos por el acierto, sin importar el turno en que lo acierte
+
+
 
 Pistas:
 -En pantalla se mostrará una barra de colores que informará que tan cerca o lejos estas
